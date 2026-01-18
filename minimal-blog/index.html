@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist - Writing for the Soul</title>
+    <link href="/src/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+      .font-sans {
+        font-family: "Source Sans Pro", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f9f9f9] text-gray-800 font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-30">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a
+          href="#"
+          class="text-3xl font-serif font-bold tracking-tight hover:text-gray-600 transition-colors"
+        >
+          Minimalist.
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#"
+            class="text-sm font-semibold uppercase tracking-wider text-gray-600 hover:text-black transition-colors"
+            >Journal</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold uppercase tracking-wider text-gray-600 hover:text-black transition-colors"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold uppercase tracking-wider text-gray-600 hover:text-black transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Icon (Visual only for now since no JS, or could simple checkbox hack) -->
+        <label for="menu-toggle" class="md:hidden p-2 cursor-pointer">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </label>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Checkbox Logic -->
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
+    <div
+      class="hidden peer-checked:block md:hidden bg-white border-b border-gray-200 p-4 absolute w-full z-20 shadow-lg"
+    >
+      <nav class="flex flex-col space-y-4 text-center">
+        <a
+          href="#"
+          class="text-sm font-semibold uppercase tracking-wider text-gray-600 hover:text-black"
+          >Journal</a
+        >
+        <a
+          href="#"
+          class="text-sm font-semibold uppercase tracking-wider text-gray-600 hover:text-black"
+          >About</a
+        >
+        <a
+          href="#"
+          class="text-sm font-semibold uppercase tracking-wider text-gray-600 hover:text-black"
+          >Contact</a
+        >
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12"
+    >
+      <!-- Left Column: Articles -->
+      <div class="lg:col-span-8 space-y-16">
+        <!-- Featured Article -->
+        <article class="flex flex-col space-y-4">
+          <a href="#" class="group overflow-hidden rounded-lg block">
+            <img
+              src="https://images.unsplash.com/photo-1499750310159-52f0f83ad497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80"
+              alt="Travel"
+              class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </a>
+          <div class="space-y-2">
+            <span
+              class="text-xs font-semibold tracking-widest text-gray-500 uppercase"
+              >Travel</span
+            >
+            <h2
+              class="text-4xl font-serif font-bold leading-tight group-hover:text-gray-600 transition-colors"
+            >
+              <a href="#">The Art of Slow Living in Coastal Italy</a>
+            </h2>
+            <p class="prose-custom">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud...
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-4 text-sm font-semibold uppercase tracking-wider border-b-2 border-black pb-1 hover:border-gray-500 transition-colors"
+              >Read Story</a
+            >
+          </div>
+        </article>
+
+        <hr class="border-gray-200" />
+
+        <!-- Secondary Articles Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="space-y-3">
+            <a href="#" class="block overflow-hidden rounded-lg">
+              <img
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                class="w-full h-48 object-cover hover:opacity-90 transition-opacity"
+              />
+            </a>
+            <span
+              class="text-xs font-semibold tracking-widest text-gray-500 uppercase"
+              >Lifestyle</span
+            >
+            <h3 class="text-2xl font-serif font-bold">
+              <a href="#" class="hover:underline">Workflow Minimalism</a>
+            </h3>
+            <p class="text-gray-600 line-clamp-3">
+              Create a workspace that inspires creativity and reduces
+              distraction.
+            </p>
+          </article>
+
+          <article class="space-y-3">
+            <a href="#" class="block overflow-hidden rounded-lg">
+              <img
+                src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                class="w-full h-48 object-cover hover:opacity-90 transition-opacity"
+              />
+            </a>
+            <span
+              class="text-xs font-semibold tracking-widest text-gray-500 uppercase"
+              >Design</span
+            >
+            <h3 class="text-2xl font-serif font-bold">
+              <a href="#" class="hover:underline">Typography Rules</a>
+            </h3>
+            <p class="text-gray-600 line-clamp-3">
+              Understanding the basics of type can transform your design
+              projects.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="lg:col-span-4 space-y-12">
+        <!-- About Widget -->
+        <div
+          class="bg-white p-8 border border-gray-100 rounded-lg shadow-sm text-center"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+          />
+          <h3 class="font-serif text-xl font-bold mb-2">Hello, I'm Sarah</h3>
+          <p class="text-gray-600 text-sm mb-6">
+            I write about minimalist living, thoughtful design, and slow travel.
+            Welcome to my digital garden.
+          </p>
+          <a
+            href="#"
+            class="text-xs font-bold uppercase tracking-widest border border-gray-300 px-6 py-3 hover:bg-black hover:text-white transition-all"
+            >More About Me</a
+          >
+        </div>
+
+        <!-- Newsletter -->
+        <div class="bg-gray-900 text-white p-8 rounded-lg text-center">
+          <h3 class="font-serif text-2xl font-bold mb-2">
+            Join the Newsletter
+          </h3>
+          <p class="text-gray-400 text-sm mb-6">
+            Weekly insights on living better with less.
+          </p>
+          <form onsubmit="return false;">
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-full p-3 text-gray-900 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            />
+            <button
+              class="w-full bg-white text-black font-bold uppercase text-xs tracking-widest py-3 rounded hover:bg-gray-200 transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+        <!-- Categories -->
+        <div>
+          <h3
+            class="font-serif text-lg font-bold border-b border-gray-200 pb-2 mb-4"
+          >
+            Categories
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="flex justify-between text-gray-600 hover:text-black hover:translate-x-1 transition-all"
+                ><span>Lifestyle</span>
+                <span class="text-gray-400 font-normal">(12)</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex justify-between text-gray-600 hover:text-black hover:translate-x-1 transition-all"
+                ><span>Travel</span>
+                <span class="text-gray-400 font-normal">(8)</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex justify-between text-gray-600 hover:text-black hover:translate-x-1 transition-all"
+                ><span>Design</span>
+                <span class="text-gray-400 font-normal">(15)</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex justify-between text-gray-600 hover:text-black hover:translate-x-1 transition-all"
+                ><span>Tech</span>
+                <span class="text-gray-400 font-normal">(5)</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-20">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-4 md:mb-0">
+          <span class="font-serif font-bold text-lg">Minimalist.</span>
+          <span class="text-gray-500 text-sm ml-4"
+            >&copy; 2026. All rights reserved.</span
+          >
+        </div>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-black transition-colors"
+            >Twitter</a
+          >
+          <a href="#" class="text-gray-400 hover:text-black transition-colors"
+            >Instagram</a
+          >
+          <a href="#" class="text-gray-400 hover:text-black transition-colors"
+            >Pinterest</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
